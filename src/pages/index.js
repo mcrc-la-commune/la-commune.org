@@ -3,4 +3,4 @@ import News from './News'
 import Partner from './Partner'
 import Question from './Question'
 
-export { Home, News, Partner, Question }
+export { Home, News, Partner, Question }

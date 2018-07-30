@@ -1,8 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
-import { List, ListItem, withStyles } from '@material-ui/core'
-import { Favorite } from '@material-ui/icons'
+import List from '@material-ui/core/List'
+import ListItem from '@material-ui/core/ListItem'
+import withStyles from '@material-ui/core/styles/withStyles'
+import Favorite from '@material-ui/icons/Favorite'
 
 import { container, primaryColor } from '../material-kit-react.jsx'
 
@@ -41,7 +43,12 @@ const styles = theme => ({
     }
   },
   footer: {
-    padding: '0.9375rem 0',
+    [theme.breakpoints.down('sm')]: {
+      padding: '15px 0 71px'
+    },
+    [theme.breakpoints.up('md')]: {
+      padding: '15px 0'
+    },
     textAlign: 'center',
     display: 'flex',
     zIndex: '2',

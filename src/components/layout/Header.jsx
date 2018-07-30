@@ -1,12 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import {
-  AppBar,
-  Toolbar,
-  Typography,
-  withStyles,
-  Button
-} from '@material-ui/core'
+import withStyles from '@material-ui/core/styles/withStyles'
 import GridContainer from '../Grid/GridContainer'
 import GridItem from '../Grid/GridItem'
 import Parallax from '../Parallax'
@@ -19,7 +13,7 @@ const styles = theme => ({
   },
   title: {
     textAlign: 'center',
-    color: theme.palette.secondary.main,
+    color: theme.palette.secondary.main
   }
 })
 
@@ -28,18 +22,20 @@ function SimpleAppBar(props) {
   return (
     <div className={classes.root}>
       <Bar />
-      {image && <Parallax filter image={image}>
-        <Container>
-          <GridContainer>
-            <GridItem>
-              <h1 className={classes.title}>La Commune</h1>
-              <h4 className={classes.title}>
-                La monnaie locale complémentaire du Roannais
-              </h4>
-            </GridItem>
-          </GridContainer>
-        </Container>
-      </Parallax>}
+      {image && (
+        <Parallax filter image={image}>
+          <Container>
+            <GridContainer>
+              <GridItem>
+                <h1 className={classes.title}>La Commune</h1>
+                <h4 className={classes.title}>
+                  La monnaie locale complémentaire du Roannais
+                </h4>
+              </GridItem>
+            </GridContainer>
+          </Container>
+        </Parallax>
+      )}
     </div>
   )
 }

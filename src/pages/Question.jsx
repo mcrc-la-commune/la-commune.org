@@ -1,11 +1,6 @@
 import React, { Component } from 'react'
 
-import {
-  Layout,
-  ProductSection,
-  Container,
-  SimpleMediaCard
-} from '../components'
+import { Layout, ProductSection } from '../components'
 
 class Question extends Component {
   render() {
@@ -13,9 +8,6 @@ class Question extends Component {
       <Layout>
         <h1>Question</h1>
         <ProductSection />
-        <Container>
-          <SimpleMediaCard />
-        </Container>
       </Layout>
     )
   }

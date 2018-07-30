@@ -1,24 +1,13 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-import {
-  Layout,
-  ProductSection,
-  Container,
-  SimpleMediaCard
-} from '../components'
+import Header from '../components/layout/Header'
+import PartnerMap from '../components/PartnerMap'
 
-class Home extends Component {
-  render() {
-    return (
-      <Layout>
-        <h1>Partner</h1>
-        <ProductSection />
-        <Container>
-          <SimpleMediaCard />
-        </Container>
-      </Layout>
-    )
-  }
-}
+const Partner = () => (
+  <div>
+    <Header />
+    <PartnerMap />
+  </div>
+)
 
-export default Home
+export default Partner

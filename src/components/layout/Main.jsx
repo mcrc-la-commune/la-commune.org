@@ -1,5 +1,5 @@
 import React from 'react'
-import { withStyles } from '@material-ui/core'
+import withStyles from '@material-ui/core/styles/withStyles'
 
 const styles = {
   main: {
@@ -23,7 +23,9 @@ const styles = {
 }
 
 const Main = ({ children, withImage, classes }) => (
-  <div className={withImage ? classes.mainWithImage : classes.main}>{children}</div>
+  <div className={withImage ? classes.mainWithImage : classes.main}>
+    {children}
+  </div>
 )
 
 export default withStyles(styles)(Main)

@@ -1,6 +1,8 @@
 import ProductSection from './ProductSection'
 import SimpleMediaCard from './SimpleMediaCard'
 import Container from './Container'
-export { Bar, Footer, Header, Layout, Main } from './layout'
+import ScrollToTop from './ScrollToTop'
 
-export { ProductSection, SimpleMediaCard, Container }
+export { ScrollToTop, ProductSection, SimpleMediaCard, Container }
+
+export { Bar, Footer, Header, Layout, Main } from './layout'
