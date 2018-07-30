@@ -1,0 +1,22 @@
+language: node_js
+node_js:
+  - '8'
+cache:
+  yarn: true
+  directories:
+    - node_modules
+script:
+  - yarn lint
+  # - yarn test
+  - yarn build
+deploy:
+  skip_cleanup: true
+  provider: pages
+  local_dir: build
+  github_token: $GITHUB_TOKEN
+  on:
+    branch: master
+env:
+  global:
+    # travis encrypt GITHUB_TOKEN=<token> --org --repo la-commune/la-commune.org
+    secure: DbZgp31ueOohK/gGKCU+Zk+BUcxn/oof1mC5fSSAP48FJb1AbEwy72qZbORD+MHdFuDVCSQqxT+IOZ3Qr5jkqDJapRniXiXRhml9DL4woV/mtPpoAB4145wykpTzbOui3JNv1teIKdfvLXKQmm11U3WDTOCiXYzcTc7JLTk/SlLMtA2t02OvqhOxWEdZ2hDmPDVbHGxX0SmJggX9yMBi/2r/SVRZjAAmJ5aeJkz+A8z2l1ze92PbjEmAb6FcwtJDMqKYwbJ/C7VI90ao+x/lsnqgDGpn30IUNb8kWK95C02tux5hIwnAyDeP5pn0rGGIWyd3Qt9/OtUcimbteG5B2UTV1iT+t8YgLORpuzOcJcKTbA0ZC1IeuNXZ22j3PBAWdEj5gj500Q16XxopxkP98qHLXYXAp5ybp2XJdSWxzJ/SsGCdM22Y3J9dhH4uGC5M+R0Ud2HRbX0znc3ZIiMKHLx+R9t8/IgSxD/b9X+KSIioKfns6GzYLQcB4GxrzohC9N8vh16CX2V/7FYJhkbo8gh3RxsTt8zn+IxZ7YfrqeEQ8ArW9zNzbk/eOZFcDrf5cCjm9++Nt3COHA7xjtOjuOYY6ZFMRGNDddaq6hUIoiSnbWRoNfamP+wnam+VO/SjgqNf4ZT8RC3y++IT/YndVZhIX3tY97n7ZdnZDZaSoMw=
