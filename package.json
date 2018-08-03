@@ -4,6 +4,7 @@
   "homepage": "https://la-commune.org",
   "license": "MIT",
   "scripts": {
+    "test:size": "bundlesize",
     "analyze": "source-map-explorer build/static/js/main.*",
     "lint": "eslint --fix 'src/**/*.js' 'src/**/*.jsx'",
     "start": "react-scripts start",
@@ -31,6 +32,7 @@
     "babel-plugin-transform-class-properties": "6.24.1",
     "babel-plugin-transform-object-rest-spread": "6.26.0",
     "babel-preset-cozy-app": "0.10.0",
+    "bundlesize": "0.17.0",
     "eslint": "4.19.1",
     "eslint-config-airbnb": "17.0.0",
     "eslint-config-cozy-app": "0.7.0",
@@ -43,5 +45,15 @@
     "prettier": "1.13.7",
     "react-scripts": "1.1.4",
     "source-map-explorer": "1.5.0"
-  }
+  },
+  "bundlesize": [
+    {
+      "path": "./build/static/js/main.*.js",
+      "maxSize": "250Kb"
+    },
+    {
+      "path": "./build/static/css/main.*.css",
+      "maxSize": "10Kb"
+    }
+  ]
 }

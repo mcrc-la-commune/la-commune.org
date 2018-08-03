@@ -9,6 +9,7 @@ script:
   - yarn lint
   # - yarn test
   - yarn build
+  - yarn test:size
 deploy:
   skip_cleanup: true
   provider: pages
@@ -18,5 +19,9 @@ deploy:
     branch: master
 env:
   global:
+    # To deploy
     # travis encrypt GITHUB_TOKEN=<token> --org --repo la-commune/la-commune.org
-    secure: DbZgp31ueOohK/gGKCU+Zk+BUcxn/oof1mC5fSSAP48FJb1AbEwy72qZbORD+MHdFuDVCSQqxT+IOZ3Qr5jkqDJapRniXiXRhml9DL4woV/mtPpoAB4145wykpTzbOui3JNv1teIKdfvLXKQmm11U3WDTOCiXYzcTc7JLTk/SlLMtA2t02OvqhOxWEdZ2hDmPDVbHGxX0SmJggX9yMBi/2r/SVRZjAAmJ5aeJkz+A8z2l1ze92PbjEmAb6FcwtJDMqKYwbJ/C7VI90ao+x/lsnqgDGpn30IUNb8kWK95C02tux5hIwnAyDeP5pn0rGGIWyd3Qt9/OtUcimbteG5B2UTV1iT+t8YgLORpuzOcJcKTbA0ZC1IeuNXZ22j3PBAWdEj5gj500Q16XxopxkP98qHLXYXAp5ybp2XJdSWxzJ/SsGCdM22Y3J9dhH4uGC5M+R0Ud2HRbX0znc3ZIiMKHLx+R9t8/IgSxD/b9X+KSIioKfns6GzYLQcB4GxrzohC9N8vh16CX2V/7FYJhkbo8gh3RxsTt8zn+IxZ7YfrqeEQ8ArW9zNzbk/eOZFcDrf5cCjm9++Nt3COHA7xjtOjuOYY6ZFMRGNDddaq6hUIoiSnbWRoNfamP+wnam+VO/SjgqNf4ZT8RC3y++IT/YndVZhIX3tY97n7ZdnZDZaSoMw=
+    - secure: DbZgp31ueOohK/gGKCU+Zk+BUcxn/oof1mC5fSSAP48FJb1AbEwy72qZbORD+MHdFuDVCSQqxT+IOZ3Qr5jkqDJapRniXiXRhml9DL4woV/mtPpoAB4145wykpTzbOui3JNv1teIKdfvLXKQmm11U3WDTOCiXYzcTc7JLTk/SlLMtA2t02OvqhOxWEdZ2hDmPDVbHGxX0SmJggX9yMBi/2r/SVRZjAAmJ5aeJkz+A8z2l1ze92PbjEmAb6FcwtJDMqKYwbJ/C7VI90ao+x/lsnqgDGpn30IUNb8kWK95C02tux5hIwnAyDeP5pn0rGGIWyd3Qt9/OtUcimbteG5B2UTV1iT+t8YgLORpuzOcJcKTbA0ZC1IeuNXZ22j3PBAWdEj5gj500Q16XxopxkP98qHLXYXAp5ybp2XJdSWxzJ/SsGCdM22Y3J9dhH4uGC5M+R0Ud2HRbX0znc3ZIiMKHLx+R9t8/IgSxD/b9X+KSIioKfns6GzYLQcB4GxrzohC9N8vh16CX2V/7FYJhkbo8gh3RxsTt8zn+IxZ7YfrqeEQ8ArW9zNzbk/eOZFcDrf5cCjm9++Nt3COHA7xjtOjuOYY6ZFMRGNDddaq6hUIoiSnbWRoNfamP+wnam+VO/SjgqNf4ZT8RC3y++IT/YndVZhIX3tY97n7ZdnZDZaSoMw=
+    # Create token https://github.com/siddharthkp/bundlesize#2-build-status
+    # travis encrypt BUNDLESIZE_GITHUB_TOKEN=<token> --org --repo la-commune/la-commune.org
+    -  secure: "fR9GopLm3xNLPUu7U/M8VvKhvJ1wxCGe3qbNb8tvNEfo4R4lpkdEzxAo+90G51gyV27puPJbJWMaUcILhuQnxt6GOEPdZvYEpMCeunufpolaLUXXlQz60E/9hMQZtARuT2cChbo1PCWJqgQUAKMVImOxbQXKrvWRXwAx7AmaUteHDSVoFydLKjZqQa/LRpafy+YJAwV5FcGSrRjNG1qyEIzX1hwijq+HWBzDxFjSiNLDn6F/pINkdWuxMHnjWzpUuAsI+sJzLdAEIxkEwcA4PgscgiPQgAGw9Dt32DDtijUPXZRcKKaFmJwd/+FAiJqhSROSDh9FyamreNQB8V8j1W/ps3mYvRJCTkMoh6VcAWUbh5l5zaXe/Z4y/L70ok/C1k4jGIVyGtRRH8b+RIH8ovQCaylEafYwWWwhuT+pzI85Cc5QotbSTA2EKYOBWxR3HdgU9IM/F/jlI3WBn0gRFIxAMPcmnmLLbqke8oQeaKQTJJNDTbt9vcwI1wAXsHSV6ZQwz6dR7EpEHaxUNWp0p+6hljaLhxWu2HQV2cIpMDY2rPWfgfRllwEDG802rXZj56ZMWAfjIfLwrx+kBTt6K6MrYX5eLJ6sto0tYB8S8VMla+11H4LmueG1oKzGAlSxNaxFoibC+dzPOIOaNaGLOprLFscKUZhhiTOAOc6wLRg="
