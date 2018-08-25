@@ -26,8 +26,8 @@ const routes = [
     icon: <Map />
   },
   {
-    path: '/questionnement',
-    label: 'Question',
+    path: '/comprendre',
+    label: 'Comprendre',
     component: Question,
     icon: <QuestionAnswer />
   }
