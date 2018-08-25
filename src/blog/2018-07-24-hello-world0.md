@@ -1,9 +1,8 @@
 ---
-title: 'Hello World'
+title: 'Forum des Associations'
 image: 'le-roannais.jpg'
-description: 'Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica'
+description: 'La Commune participera au Forum des Associations de Roanne le samedi 15 Septembre 2018'
 ---
 
-# Cool
-
-Ça fonctionne !!!
+# Forum des Associations
+Nous tiendrons un stand en commun avec Pollens lors de cette journée, où environ une centaine d'associations vont pouvoir présenter leurs activités aux Roannais et Roannaises 
