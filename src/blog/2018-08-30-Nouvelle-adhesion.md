@@ -1,9 +1,9 @@
 ---
-title: 'Mais ça fonctionne !!!'
+title: 'Forum des Associations'
 image: 'le-roannais.jpg'
-description: 'Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica'
+description: 'La Commune sera présente au cours du Forum des Associations de Roanne le Samedi 15 Septembre 2018'
 ---
 
-# Cool
+# Forum des Associations de 10h à 18H00
 
-Ça fonctionne !!!
+En compagnie de Pollens, nous tiendrons un stand commun pour informer le public à la fois sur L'ESS et la monnaie locale
